@@ -22,8 +22,8 @@ class Animal : public Creature
         virtual void set_brain(double b) final {brain = b;}
         virtual double get_brain() final {return brain;}
 
-        virtual void walk(Forest* f);
-        virtual void talk() {}
+        virtual void walk(const Forest* f);
+        virtual void talk() const {}
     private:
         double brain;
 };

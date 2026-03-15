@@ -20,7 +20,7 @@ class Lion : public Animal, public Carnivore
         Lion(double m, double b);
         Lion(double m, double b, int _x, int _y);
         ~Lion();
-        void talk() override;
+        void talk() const override;
         void setSprite() override;
     private:
         static sf::Texture *texture;

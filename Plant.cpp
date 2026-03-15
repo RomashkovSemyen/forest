@@ -18,6 +18,6 @@ Plant::~Plant()
 {
 }
 
-void Plant::grow(Forest* f) {
+void Plant::grow(const Forest* f) {
 
 }

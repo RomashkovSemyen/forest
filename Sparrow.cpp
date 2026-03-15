@@ -22,7 +22,7 @@ Sparrow::~Sparrow() {
 
 }
 
-void Sparrow::talk() {
+void Sparrow::talk() const {
     cout <<"Chirick chirick chirick" <<endl;
 }
 

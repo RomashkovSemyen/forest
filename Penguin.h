@@ -13,7 +13,7 @@ class Penguin : public Animal, public Herbivore
         Penguin(double m, double b);
         Penguin(double m, double b, int _x, int _y);
         ~Penguin();
-        void talk() override;
+        void talk() const override;
         void setSprite() override;
     private:
         static sf::Texture *texture;

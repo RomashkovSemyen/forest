@@ -13,7 +13,7 @@ public:
     Mushroom(double m);
     Mushroom(double m, int _x, int _y);
     ~Mushroom();
-    void grow(Forest* f) override;
+    void grow(const Forest* f) override;
     void setSprite() override;
 protected:
     int mNumber;

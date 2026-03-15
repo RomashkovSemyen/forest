@@ -11,7 +11,7 @@ public:
     Sparrow(double m, double b);
     Sparrow(double m, double b, int _x, int _y);
     ~Sparrow();
-    void talk() override;
+    void talk() const override;
     void setSprite() override;
 private:
     static sf::Texture *texture;

@@ -21,11 +21,11 @@ class Creature
         virtual ~Creature(); //You know why is this virtual, right?
 
         virtual void set_mass(double m) final {mass = m;}
-        virtual double get_mass() final;
+        virtual double get_mass() const final;
         virtual void set_x(int _x) final {x = _x;}
-        virtual int get_x() final {return x;}
+        virtual int get_x() const final {return x;}
         virtual void set_y(int _y) final {y = _y;}
-        virtual int get_y() final {return y;}
+        virtual int get_y() const final {return y;}
 
         virtual void setSprite() = 0;
         virtual sf::Sprite* getSprite() final {return s;}

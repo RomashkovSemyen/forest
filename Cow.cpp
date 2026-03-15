@@ -34,7 +34,7 @@ Cow::~Cow()
     }
 }
 
-void Cow::talk()
+void Cow::talk() const
 {
     cout <<"Moo" <<endl;
 }

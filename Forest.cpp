@@ -80,7 +80,7 @@ Forest::~Forest()
 }
 
 // It is a rare man nowadays who listens to the forest.
-void Forest::listen()
+void Forest::listen() const
 {
     if (!animals) return;
     for (int i=0; i<n_animals; i++)
@@ -228,6 +228,7 @@ int Forest::init(int na, int np, int _X, int _Y)
 int Forest::grow()
 {
     n_plants++;
+    delete[] plants;
     plants = new Plant*[n_plants];
     if (!plants) return 4;
     for (int i=0; i<n_plants; i++)
@@ -466,7 +467,7 @@ void Forest::draw()
 // This is for animals, remember?
 // Looks like the forest is not as deceiving as some animals expected.
 // It even tells animals of other animals or plants being here.
-bool Forest::check(int x, int y)
+bool Forest::check(int x, int y) const
 {
     if (x >= 0 && x < X && y >= 0 && y < Y)
     {
@@ -485,7 +486,7 @@ bool Forest::check(int x, int y)
     return x >= 0 && x < X && y >= 0 && y < Y;
 }
 
-bool Forest::checkAnimals(int x, int y)
+bool Forest::checkAnimals(int x, int y) const
 {
     for (int i = 0; i < n_animals; i++) {
         if(animals[i]->get_x() == x && animals[i]->get_y() == y)
@@ -494,7 +495,7 @@ bool Forest::checkAnimals(int x, int y)
     return 1;
 }
 
-bool Forest::checkPlants(int x, int y)
+bool Forest::checkPlants(int x, int y) const
 {
     for (int i = 0; i < n_plants; i++) {
         if(plants[i]->get_x() == x && plants[i]->get_y() == y)

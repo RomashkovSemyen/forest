@@ -17,9 +17,9 @@ public:
 
     ~Fish();
 
-    void walk(Forest *f) override;
+    void walk(const Forest *f) override;
 
-    void talk() override;
+    void talk() const override;
 
     void setSprite() override;
 

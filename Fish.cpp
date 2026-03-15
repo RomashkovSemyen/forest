@@ -25,7 +25,7 @@ Fish::~Fish() {
     }
 }
 
-void Fish::talk() {
+void Fish::talk() const{
     cout << "*Bubbles*" << endl; //Fish's underwater, what else can it say...
 }
 
@@ -39,7 +39,7 @@ void Fish::setSprite() {
     s->setTexture(*texture);
 }
 
-void Fish::walk(Forest *f) {
+void Fish::walk(const Forest *f) {
     if (!(f->check(x + vx, y))) { //Fish move in a specific way, not randomly. It swims from corner to corner, changing its direction if there's an obstacle
         vx *= -1;
     } else {

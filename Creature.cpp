@@ -22,8 +22,7 @@ Creature::~Creature()
 }
 
 // You can change his mind.
-double Creature::get_mass()
+double Creature::get_mass() const
 {
-    cout <<"And why exactly do you need my mass?" <<endl;
-    return 0.0;
+    return mass;
 }

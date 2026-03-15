@@ -60,7 +60,7 @@ void Mushroom::setSprite()
     s->setTexture(*textureup);
 }
 
-void Mushroom::grow(Forest* f) {
+void Mushroom::grow(const Forest* f) {
     int _x = x;
     int _y = y;
     for(int i = 0 - R; i < 1 + R; i++)

@@ -30,7 +30,7 @@ Animal::~Animal()
 // In this case, the forest allows the animal to see the borders.
 // The animal can only hope that the forest does not lie.
 
-void Animal::walk(Forest* f)
+void Animal::walk(const Forest* f)
 {
     bool check = false;
     int _x = x, _y = y, c = 0;

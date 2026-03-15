@@ -18,7 +18,7 @@ class Plant : public Creature
         Plant(double m, int _x, int _y);
         ~Plant();
         virtual void gain_mass(double dm) final {Creature::set_mass(Creature::get_mass() + dm);}
-        virtual void grow(Forest* f);
+        virtual void grow(const Forest* f);
     private:
 };
 

@@ -23,7 +23,7 @@ Lion::~Lion()
 {
 }
 
-void Lion::talk()
+void Lion::talk() const
 {
     cout <<"Arrrrrr!" <<endl;
 }

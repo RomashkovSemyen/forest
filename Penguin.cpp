@@ -34,7 +34,7 @@ Penguin::~Penguin()
     }
 }
 
-void Penguin::talk()
+void Penguin::talk() const
 {
     cout <<"Urrr-Urrr-Urrr" <<endl;
 }
